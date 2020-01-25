@@ -34,8 +34,8 @@ b = [1.0 / n] * n
 a = 1
 score_filtered = lfilter(b,a,score)
 
-plt.plot(epochs, score, linewidth=1, linestyle="-", c="g", alpha=0.4)        
-plt.plot(epochs, score_filtered, linewidth=2, linestyle="-", c="g") 
+plt.plot(epochs, score, linewidth=1, linestyle="-", c="#fc7b03", alpha=0.4)        
+plt.plot(epochs, score_filtered, linewidth=2, linestyle="-", c="#fc7b03") 
 plt.title('Score during training')
 plt.ylabel('Score')
 plt.xlabel('Epochs')
