@@ -23,7 +23,7 @@ ACTION_SIZE = 3
 
 render_game = True
 record_game = True
-network_path = './train_breakout/breakout_model_20200125073327.h5'
+network_path = './trained_breakout/breakout_model_20200125073327.h5'
 log_path = './log_test.txt'
 video_path = './video/'
 

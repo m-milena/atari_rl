@@ -20,7 +20,7 @@ from keras.models import Model, load_model, clone_model
 
 
 # Training details
-training_dir = 'train_breakout'
+training_dir = 'trained_network'
 render_game = False
 NUM_EPOCHS = 100000
 OBSERVE_STEP_NUM = 50000
@@ -40,7 +40,7 @@ ACTION_SIZE = 3
 
 # Resume model training
 resume = True
-restore_path = './train_breakout/breakout_model_20200125073327.h5'
+restore_path = './trained_network/breakout_model_20200125073327.h5'
 
 
 def pre_processing(observe):
