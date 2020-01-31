@@ -101,7 +101,7 @@ def get_one_hot(targets, nb_classes):
     return np.eye(nb_classes)[np.array(targets).reshape(-1)]
 
 
-def train_memory_batch(memory, model, log_dir):
+def train_memory_batch(memory, model):
     mini_batch = random.sample(memory, BATCH_SIZE)
     history = np.zeros((BATCH_SIZE, ATARI_SHAPE[0],
                         ATARI_SHAPE[1], ATARI_SHAPE[2]))
@@ -199,7 +199,7 @@ def train():
             store_memory(memory, history, action, reward, next_history, dead)  #
 
             if global_step > OBSERVE_STEP_NUM:
-                loss = loss + train_memory_batch(memory, model, log_dir)
+                loss = loss + train_memory_batch(memory, model)
                 if global_step % REFRESH_TARGET_MODEL_NUM == 0:  
                     model_target.set_weights(model.get_weights())
 
